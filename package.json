@@ -79,11 +79,17 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
+    "@patternfly/react-charts": "^6.14.11",
     "@patternfly/react-core": "^4.84.4",
     "@patternfly/react-icons": "^4.7.22",
     "@patternfly/react-styles": "^4.7.22",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@types/react-redux": "^7.1.16",
+    "await-to-js": "^3.0.0",
+    "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.3",
     "react-router-last-location": "^2.0.1",
     "sirv-cli": "^1.0.10"
   }

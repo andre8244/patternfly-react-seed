@@ -5,6 +5,7 @@ import { Dashboard } from '@app/Dashboard/Dashboard';
 import { Support } from '@app/Support/Support';
 import { GeneralSettings } from '@app/Settings/General/GeneralSettings';
 import { ProfileSettings } from '@app/Settings/Profile/ProfileSettings';
+import { Users } from '@app/Users/Users';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { LastLocationProvider, useLastLocation } from 'react-router-last-location';
@@ -63,6 +64,14 @@ const routes: AppRouteConfig[] = [
         title: 'PatternFly Seed | Profile Settings',
       },
     ],
+  },
+  {
+    component: Users,
+    exact: true,
+    isAsync: true,
+    label: 'Users',
+    path: '/users',
+    title: 'PatternFly Seed | Users Page',
   },
 ];
 

@@ -5,13 +5,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { AppLayout } from '@app/AppLayout/AppLayout';
 import { AppRoutes } from '@app/routes';
 import '@app/app.css';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
 
 const App: React.FunctionComponent = () => (
-  <Router>
-    <AppLayout>
-      <AppRoutes />
-    </AppLayout>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <AppLayout>
+        <AppRoutes />
+      </AppLayout>
+    </Router>
+  </Provider>
 );
 
 export default hot(App);

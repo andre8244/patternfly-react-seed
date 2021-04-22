@@ -12,6 +12,8 @@ import {
 } from '@patternfly/react-core';
 import { routes, IAppRoute, IAppRouteGroup } from '@app/routes';
 import logo from '@app/bgimages/Patternfly-Logo.svg';
+import { ToastAlertGroup } from '@app/components/ToastAlertGroup';
+import { BasicNotificationDrawer } from '@app/AppLayout/BasicNotificationDrawer';
 
 interface IAppLayout {
   children: React.ReactNode;
@@ -100,14 +102,18 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     </SkipToContent>
   );
   return (
-    <Page
-      mainContainerId={pageId}
-      header={Header}
-      sidebar={Sidebar}
-      onPageResize={onPageResize}
-      skipToContent={PageSkipToContent}>
-      {children}
-    </Page>
+    <React.Fragment>
+      {/* <BasicNotificationDrawer /> */}
+      <Page
+        mainContainerId={pageId}
+        header={Header}
+        sidebar={Sidebar}
+        onPageResize={onPageResize}
+        skipToContent={PageSkipToContent}>
+        {children}
+      </Page>
+      <ToastAlertGroup />
+    </React.Fragment>
   );
 }
 
